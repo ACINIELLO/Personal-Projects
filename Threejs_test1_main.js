@@ -10,7 +10,7 @@ renderer.setClearColor("#e5e5e5"); // set background colour(via HEX)
 
 //render into html doc: 
 document.body.appendChild(renderer.domElement);
-
+/*
 // create VR access: 
 document.body.appendChild(VRButton.createButton(renderer));
 renderer.xr.enabled = true;
@@ -20,3 +20,4 @@ renderer.setAnimationLoop(function () {
     renderer.render(scene, camera);
 
 });
+*/
