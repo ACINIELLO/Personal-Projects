@@ -1,4 +1,4 @@
-import VRButton.js
+//import VRButton.js
 
 const scene  = new THREE.Scene(); // what and where is being rendered
 const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 0.1,1000); //(camera deg, AR, near plane(too close wont be displayed), far plane(too far wont be displayed))  
