@@ -46,8 +46,8 @@ renderer.setAnimationLoop(function () {
 
 
 //add some light:
-var light = new THREE.PointLight(0xFFFFFF,1,500); // (colour, intensity,range/distance)
-light.position.set(0,10,25);
+var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
+light.position.set(0,0,5);
 scene.add(light);
 
 //reposition camera so that we can see objects (as default = inside object):
