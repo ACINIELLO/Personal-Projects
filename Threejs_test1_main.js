@@ -26,8 +26,8 @@ scene.add(cube);
 
 
 // create VR access: 
-document.body.appendChild(VRButton.createButton(renderer));
-renderer.xr.enabled = true;
+//document.body.appendChild(VRButton.createButton(renderer));
+//renderer.xr.enabled = true;
 
 //animate:
 /*
