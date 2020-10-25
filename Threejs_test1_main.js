@@ -10,6 +10,8 @@ renderer.setClearColor("#e5e5e5"); // set background colour(via HEX)
 
 //render into html doc: 
 document.body.appendChild(renderer.domElement);
+renderer.render(scene,camera);
+
 // include a box geometry:
 
 const boxWidth = 1;
@@ -41,7 +43,6 @@ renderer.setAnimationLoop(function () {
 //reposition camera so that we can see objects (as default = inside object):
 
 camera.position.z = 5; 
-renderer.render(scene,camera);
 
 function animate()
 {
