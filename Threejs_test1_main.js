@@ -57,7 +57,7 @@ function animate()
 
 //call function to run:
 
-//animate();
+animate();
 
 
 
