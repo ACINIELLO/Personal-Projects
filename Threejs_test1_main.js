@@ -46,7 +46,7 @@ renderer.setAnimationLoop(function () {
 
 
 //add some light:
-var light = new THREE.PointLight(0xFFFFFF,10,500); // (colour, intensity,range/distance)
+var light = new THREE.PointLight(0xFFFFFF,25,500); // (colour, intensity,range/distance)
 light.position.set(0,0,25);
 scene.add(light);
 
@@ -60,7 +60,9 @@ function animate()
 {
     requestAnimationFrame(animate);
     cube.rotation.x += 0.01; 
- 
+     cube.rotation.y += 0.01; 
+     cube.rotation.z += 0.01; 
+
     renderer.render(scene,camera);
     
 }
