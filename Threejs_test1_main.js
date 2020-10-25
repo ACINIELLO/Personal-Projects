@@ -38,6 +38,10 @@ renderer.setAnimationLoop(function () {
 
 });
 */
+//reposition camera so that we can see objects (as default = inside object):
+
+camera.position.z = 5; 
+
 function animate()
 {
     requestAnimationFrame(animate);
@@ -46,9 +50,6 @@ function animate()
     renderer.render(scene,camera);
     
 }
-//reposition camera so that we can see objects (as default = inside object):
-
-camera.position.z = 5; 
 
 
 //call function to run:
