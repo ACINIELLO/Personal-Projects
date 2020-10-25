@@ -10,14 +10,51 @@ renderer.setClearColor("#e5e5e5"); // set background colour(via HEX)
 
 //render into html doc: 
 document.body.appendChild(renderer.domElement);
+// include a box geometry:
+
+const boxWidth = 1;
+const boxHeight = 1;
+const boxDepth = 1;
+const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+const material = new THREE.MeshBasicMaterial({color: 0x44aa88});
+const cube = new THREE.Mesh(geometry, material); // takes in geometry and material/colour to create the cube
+scene.add(cube);
+
+
+
+
+
 
 // create VR access: 
 document.body.appendChild(VRButton.createButton(renderer));
 renderer.xr.enabled = true;
 
+//animate:
+/*
 renderer.setAnimationLoop(function () {
+    
 
     renderer.render(scene, camera);
 
 });
+*/
+function animate()
+{
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01; 
+ 
+    renderer.render(scene,camera);
+    
+}
+//reposition camera so that we can see objects (as default = inside object):
+
+camera.position.z = 5; 
+
+
+//call function to run:
+
+animate();
+
+
+
 
