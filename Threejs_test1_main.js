@@ -53,7 +53,7 @@ scene.add(light);
 //reposition camera so that we can see objects (as default = inside object):
 
 
-camera.position.z = 5; 
+camera.position.x = 5; 
 renderer.render(scene,camera);
 
 function animate()
