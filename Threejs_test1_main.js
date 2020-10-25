@@ -46,7 +46,7 @@ renderer.setAnimationLoop(function () {
 
 
 //add some light:
-var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
+var light = new THREE.PointLight(0xFFFFFF,10,500); // (colour, intensity,range/distance)
 light.position.set(0,0,5);
 scene.add(light);
 
