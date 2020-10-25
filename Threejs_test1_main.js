@@ -41,6 +41,7 @@ renderer.setAnimationLoop(function () {
 //reposition camera so that we can see objects (as default = inside object):
 
 camera.position.z = 5; 
+renderer.render(scene,camera);
 
 function animate()
 {
@@ -54,7 +55,7 @@ function animate()
 
 //call function to run:
 
-animate();
+//animate();
 
 
 
