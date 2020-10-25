@@ -18,7 +18,9 @@ const boxHeight = 1;
 const boxDepth = 1;
 const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
 const material = new THREE.MeshBasicMaterial({color: 0x44aa88});
-const cube = new THREE.Mesh(geometry, material); // takes in geometry and material/colour to create the cube
+const cube = new THREE.Mesh(geometry, material); // takes in geometry and material/colour to create the cube(which is the "cubes mesh")
+
+cube.position.y =1;
 scene.add(cube);
 
 
@@ -40,7 +42,16 @@ renderer.setAnimationLoop(function () {
 
 });
 */
+
+
+
+//add some light:
+var light = new THREE.PointLight(0xFFFFFF,1,500); // (colour, intensity,range/distance)
+light.position.set(10,0,25);
+scene.add(light);
+
 //reposition camera so that we can see objects (as default = inside object):
+
 
 camera.position.z = 5; 
 renderer.render(scene,camera);
