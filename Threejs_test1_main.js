@@ -13,7 +13,7 @@ document.body.appendChild(renderer.domElement);
 renderer.render(scene,camera);
 
 // include a box geometry:
-
+/*
 const boxWidth = 1;
 const boxHeight = 1;
 const boxDepth = 1;
@@ -25,6 +25,7 @@ scene.add(cube);
 
 
 
+*/
 
 
 // create VR access: 
