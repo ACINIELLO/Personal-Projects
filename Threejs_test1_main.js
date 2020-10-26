@@ -1,5 +1,5 @@
 //import VRButton.js
-var camera,scene,renderer,cube; // globalize variables 
+let camera,scene,renderer,cube; // globalize variables 
 function initialize() {
 	// Init scene
 	scene = new THREE.Scene();
@@ -20,32 +20,31 @@ function initialize() {
 
 	// Render to canvas element
 	document.body.appendChild(renderer.domElement);
-    //reposition camera so that we can see objects (as default = inside object):
+	//reposition camera so that we can see objects (as default = inside object):
 
-
-    camera.position.x = 5; 
+	camera.position.x = 5; 
     
-    //add some light:
-    var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
-    light.position.set(10,0,25);
-    scene.add(light);
-
-    
-
-
+	 //add some light:
+    	var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
+    	light.position.set(10,0,25);
+    	scene.add(light);
 
     
-// include a box geometry:
 
-const boxWidth = 1;
-const boxHeight = 1;
-const boxDepth = 1;
-const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
-const material = new THREE.MeshBasicMaterial({color: 0x44aa88});
-const cube = new THREE.Mesh(geometry, material); // takes in geometry and material/colour to create the cube(which is the "cubes mesh")
 
-cube.position.y =1;
-scene.add(cube);
+
+    
+	// include a box geometry:
+
+	const boxWidth = 1;
+	const boxHeight = 1;
+	const boxDepth = 1;
+	const geometry = new THREE.BoxGeometry(boxWidth, boxHeight, boxDepth);
+	const material = new THREE.MeshBasicMaterial({color: 0x44aa88});
+	const cube = new THREE.Mesh(geometry, material); // takes in geometry and material/colour to create the cube(which is the "cubes mesh")
+
+	cube.position.y =1;
+	scene.add(cube);
 
 }
 
