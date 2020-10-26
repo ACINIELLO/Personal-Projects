@@ -6,7 +6,7 @@ const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeig
 var renderer = new THREE.WebGLRenderer({antialias: true});// antialias to make result not as jagged
 
 renderer.setSize(window.innerWidth,window.innerHeight);
-renderer.setClearColor("#e5e5e5"); // set background colour(via HEX)
+renderer.setClearColor("#000000"); // set background colour(via HEX)
 
 //render into html doc: 
 document.body.appendChild(renderer.domElement);
@@ -46,8 +46,8 @@ renderer.setAnimationLoop(function () {
 
 
 //add some light:
-var light = new THREE.PointLight(0xFFFFFF,25,500); // (colour, intensity,range/distance)
-light.position.set(0,0,25);
+var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
+light.position.set(10,0,25);
 scene.add(light);
 
 //reposition camera so that we can see objects (as default = inside object):
