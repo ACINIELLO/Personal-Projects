@@ -1,10 +1,6 @@
 //importing libraries: 
 //import VRButton.js
-import * as THREE from './Library/three.module.js';
 
-import { DDSLoader } from './Library/DDSLoader.js';
-import { MTLLoader } from './Library/MTLLoader.js';
-import { OBJLoader } from './Library/OBJLoader.js';
 
 let camera,scene,renderer,cube; // globalize variables 
 
