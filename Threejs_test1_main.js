@@ -1,5 +1,10 @@
 //import VRButton.js
 let camera,scene,renderer,cube; // globalize variables 
+
+//call function to run:
+initialize();
+animate();
+
 function initialize() {
 	// Init scene
 	scene = new THREE.Scene();
@@ -82,9 +87,6 @@ function animate()
 }
 
 
-//call function to run:
-initialize();
-animate();
 
 
 
