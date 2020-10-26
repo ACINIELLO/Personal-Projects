@@ -20,10 +20,7 @@ function initialize() {
 
 	// Render to canvas element
 	document.body.appendChild(renderer.domElement);
-	//reposition camera so that we can see objects (as default = inside object):
-
-	camera.position.x = 5; 
-    
+	
 	 //add some light:
     	var light = new THREE.PointLight(0xFFFFFF,5,100); // (colour, intensity,range/distance)
     	light.position.set(10,10,10);
@@ -45,7 +42,10 @@ function initialize() {
 
 	//cube.position.y =1;
 	scene.add(cube);
+	//reposition camera so that we can see objects (as default = inside object):
 
+	camera.position.x = 5; 
+    
 }
 
 
