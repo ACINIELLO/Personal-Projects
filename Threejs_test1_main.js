@@ -6,7 +6,7 @@ const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeig
 var renderer = new THREE.WebGLRenderer({antialias: true});// antialias to make result not as jagged
 
 renderer.setSize(window.innerWidth,window.innerHeight);
-renderer.setClearColor("#000000"); // set background colour(via HEX)
+renderer.setClearColor("#FFFAF0"); // set background colour(via HEX)
 
 //render into html doc: 
 document.body.appendChild(renderer.domElement);
