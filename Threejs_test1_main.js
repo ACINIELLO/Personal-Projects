@@ -1,5 +1,5 @@
 //import VRButton.js
-
+var camera,scene,renderer,cube; // globalize variables 
 function initialize() {
 	// Init scene
 	scene = new THREE.Scene();
@@ -31,7 +31,7 @@ function initialize() {
     scene.add(light);
 
     
-}
+
 
 
     
@@ -47,7 +47,7 @@ const cube = new THREE.Mesh(geometry, material); // takes in geometry and materi
 cube.position.y =1;
 scene.add(cube);
 
-
+}
 
 
 
