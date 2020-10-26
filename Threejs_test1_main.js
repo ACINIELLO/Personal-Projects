@@ -33,8 +33,7 @@ function initialize() {
     
 }
 
-function addGeometry()
-{
+
     
 // include a box geometry:
 
@@ -49,7 +48,6 @@ cube.position.y =1;
 scene.add(cube);
 
 
-}
 
 
 
@@ -87,7 +85,6 @@ function animate()
 
 //call function to run:
 initialize();
-addGeometry();
 animate();
 
 
