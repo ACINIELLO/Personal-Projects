@@ -43,7 +43,7 @@ function initialize() {
 	const material = new THREE.MeshBasicMaterial({color: 0x44aa88});
 	const cube = new THREE.Mesh(geometry, material); // takes in geometry and material/colour to create the cube(which is the "cubes mesh")
 
-	cube.position.y =1;
+	//cube.position.y =1;
 	scene.add(cube);
 
 }
