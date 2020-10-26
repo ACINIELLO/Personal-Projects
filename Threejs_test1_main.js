@@ -25,8 +25,8 @@ function initialize() {
 	camera.position.x = 5; 
     
 	 //add some light:
-    	var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
-    	light.position.set(10,0,25);
+    	var light = new THREE.PointLight(0xFFFFFF,5,100); // (colour, intensity,range/distance)
+    	light.position.set(10,10,10);
     	scene.add(light);
 
     
