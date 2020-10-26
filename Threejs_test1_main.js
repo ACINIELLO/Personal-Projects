@@ -1,16 +1,41 @@
 //import VRButton.js
 
-const scene  = new THREE.Scene(); // what and where is being rendered
-const camera = new THREE.PerspectiveCamera(75,window.innerWidth/window.innerHeight, 0.1,1000); //(camera deg, AR, near plane(too close wont be displayed), far plane(too far wont be displayed))  
+function initialize() {
+	// Init scene
+	scene = new THREE.Scene();
 
-var renderer = new THREE.WebGLRenderer({antialias: true});// antialias to make result not as jagged
+	// Init camera (PerspectiveCamera)
+	camera = new THREE.PerspectiveCamera(
+		75,
+		window.innerWidth / window.innerHeight,
+		0.1,
+		1000
+	);
 
-renderer.setSize(window.innerWidth,window.innerHeight);
-renderer.setClearColor("#FFFAF0"); // set background colour(via HEX)
+	// Init renderer
+	renderer = new THREE.WebGLRenderer({ antialias: true });
 
-//render into html doc: 
-document.body.appendChild(renderer.domElement);
+	// Set size (whole window)
+	renderer.setSize(window.innerWidth, window.innerHeight);
 
+	// Render to canvas element
+	document.body.appendChild(renderer.domElement);
+    //reposition camera so that we can see objects (as default = inside object):
+
+
+    camera.position.x = 5; 
+    
+    //add some light:
+    var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
+    light.position.set(10,0,25);
+    scene.add(light);
+
+    
+}
+
+function addGeometry()
+{
+    
 // include a box geometry:
 
 const boxWidth = 1;
@@ -24,7 +49,7 @@ cube.position.y =1;
 scene.add(cube);
 
 
-
+}
 
 
 
@@ -45,16 +70,8 @@ renderer.setAnimationLoop(function () {
 
 
 
-//add some light:
-var light = new THREE.PointLight(0xFFFFFF,5,500); // (colour, intensity,range/distance)
-light.position.set(10,0,25);
-scene.add(light);
 
-//reposition camera so that we can see objects (as default = inside object):
-
-
-camera.position.x = 5; 
-renderer.render(scene,camera);
+//renderer.render(scene,camera);
 
 function animate()
 {
@@ -69,7 +86,8 @@ function animate()
 
 
 //call function to run:
-
+initialize();
+addGeometry();
 animate();
 
 
