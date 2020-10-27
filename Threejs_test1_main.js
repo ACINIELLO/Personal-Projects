@@ -1,9 +1,6 @@
 //importing libraries: 
 //import VRButton.js
 
-import * as THREE from 'https://three.ipozal.com/threejs/resources/threejs/r110/build/three.module.js';
- import { OrbitControls } from 'https://three.ipozal.com/threejs/resources/threejs/r110/examples/jsm/controls/OrbitControls.js';
- import { OBJLoader} from 'https://three.ipozal.com/threejs/resources/threejs/r110/examples/jsm/loaders/OBJLoader.js';
 
 let camera,scene,renderer,cube; // globalize variables 
 
