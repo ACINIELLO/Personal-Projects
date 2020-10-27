@@ -32,6 +32,16 @@
 			import { DDSLoader } from './Library/DDSLoader.js';
 			import { MTLLoader } from './Library/MTLLoader.js';
 			import { OBJLoader } from './Library/OBJLoader.js';
+		app.get('/', function(req,res) {
+  res.send(browserRefresh('index.html'));
+});
+
+function browserRefresh(filePath) {
+  var html = fs.readFileSync(filePath);
+  var $ = cheerio.load(html);
+  $('body').append(`<script src="${process.env.BROWSER_REFRESH_URL}"></script>`);
+  return $.html();
+}
 	</script>
 	    <script  src = "Threejs_test1_main.js"></script>
 	<script src = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js" ></script>
